@@ -2,7 +2,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/brayd3nmay/leetcode-python)
 ![GitHub last commit](https://img.shields.io/github/last-commit/brayd3nmay/leetcode-python)
 
-![LeetCode Logo](./assets/leetCode_logo.png)
+![LeetCode Logo](./assets/leetCodeLogo.png)
 
 Welcome to my LeetCode solution repository! I'm a **Computer Science & Engineering student at The Ohio State University**, working toward a career in software engineering.
 
