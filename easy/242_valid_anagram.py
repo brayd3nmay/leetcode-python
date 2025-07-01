@@ -5,19 +5,13 @@
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        str1 = {}
-        str2 = {}
+        if len(s) != len(t):
+            return False
 
-        for c in s:
-            if c not in str1:
-                str1[c] = 1
-            else:
-                str1[c] = str1[c] + 1
+        str1, str2 = {}, {}
 
-        for c in t:
-            if c not in str2:
-                str2[c] = 1
-            else:
-                str2[c] = str2[c] + 1
+        for i in range(len(s)):
+            str1[s[i]] = 1 + str1.get(s[1], 0)
+            str2[t[i]] = 1 + str2.get(t[1], 0)
 
         return str1 == str2
