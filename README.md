@@ -19,6 +19,8 @@ This repository contains all of my LeetCode solutions, written in _Python_, alon
 | 1 | Two Sum | [Link](easy/1_two_sum.py) | Easy |
 | 217 | Contains Duplicate | [Link](easy/217_contains_duplicate.py) | Easy |
 | 242 | Valid Anagram | [Link](easy/242_valid_anagram.py) | Easy |
+| 49 | Group Anagrams | [Link](medium/49_group_anagrams.py) | Medium |
+| 347 | Top K Frequent Elements | [Link](medium/347_top_k_frequent_elements.py) | Medium |
 
 ## Resources
 - [Python Data Structures Docs](https://docs.python.org/3/tutorial/datastructures.html)
