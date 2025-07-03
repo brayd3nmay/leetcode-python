@@ -8,7 +8,7 @@ class Solution:
     def encode(self, strs: List[str]) -> str:
         encoded = ''
         for s in strs:
-            encoded += s + ','
+            encoded += str(len(s)) + s + ','
 
         return encoded
 
@@ -16,9 +16,7 @@ class Solution:
         slist = []
 
         while len(s) > 0:
-            end = s.find(',')
-            slist.append(s[0:end])
-            s = s.replace(slist[-1],'')
-            s = s.replace(',','', 1)
+            slist.append(s[1:int(s[0]) + 1])
+            s = s[int(s[0]) + 2:]
 
         return slist
