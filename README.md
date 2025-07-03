@@ -21,10 +21,14 @@ This repository contains all of my LeetCode solutions, written in _Python_, alon
 | 242 | Valid Anagram | [Link](easy/242_valid_anagram.py) | Easy |
 | 49 | Group Anagrams | [Link](medium/49_group_anagrams.py) | Medium |
 | 347 | Top K Frequent Elements | [Link](medium/347_top_k_frequent_elements.py) | Medium |
+| 271 | Encode And Decode Strings | [Link](medium/271_encode_and_decode_strings.py) | Medium |
 
 ## Resources
 - [Python Data Structures Docs](https://docs.python.org/3/tutorial/datastructures.html)
-- [NeetCode](https://neetcode.io/roadmap) 
+    - Useful for refreshing your memory for Python methods
+- [NeetCode](https://neetcode.io/roadmap)
+    - Roadmap for doing LeetCode questions
+    - Has video explanations and solutions for each problem
 
 ## Contact Me
 - [Email](mailto:may.822@osu.edu)
