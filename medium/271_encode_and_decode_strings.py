@@ -6,17 +6,25 @@
 class Solution:
 
     def encode(self, strs: List[str]) -> str:
-        encoded = ''
+        encoded = ""
         for s in strs:
-            encoded += str(len(s)) + s + ','
-
+            encoded += str(len(s)) + "$" + s
+    
         return encoded
 
     def decode(self, s: str) -> List[str]:
-        slist = []
+        res, i = [], 0
+    
+        while i < len(s):
+            j = i
 
-        while len(s) > 0:
-            slist.append(s[1:int(s[0]) + 1])
-            s = s[int(s[0]) + 2:]
+            while s[j] != "$":
+                j += 1
+                
+            length = int(s[i:j])
+            i = j + 1
+            j = i + length
+            res.append(s[i:j])
+            i = j
 
-        return slist
+        return res
