@@ -5,25 +5,16 @@
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        pre, post = [1] * len(nums), [1] * len(nums)
+        ans = [1] * len(nums)
 
-        for i, n in enumerate(nums):
-            pre[i] = n * pre[i - 1]
+        pre = 1
+        for i in range(len(nums)):
+            ans[i] *= pre
+            pre *= nums[i]
 
-        for i, n in enumerate(reversed(nums)):
-            post[i] = n * post[i - 1]
-
-        post = list(reversed(post))
-
-        ans, i = [], 0
-        while i < len(nums):
-            if i == 0:
-                ans.append(post[i + 1])
-            elif i == len(nums) - 1:
-                ans.append(pre[i - 1])
-            else:
-                ans.append(pre[i - 1] * post[i + 1])
-            
-            i += 1
+        post = 1
+        for j in range(len(nums) - 1, -1, -1):
+            ans[i] *= post
+            post *= nums[i]
 
         return ans
