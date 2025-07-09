@@ -23,6 +23,8 @@ This repository contains all of my LeetCode solutions, written in _Python_, alon
 | 347 | Top K Frequent Elements | [Link](medium/347_top_k_frequent_elements.py) | Medium |
 | 271 | Encode And Decode Strings | [Link](medium/271_encode_and_decode_strings.py) | Medium |
 | 238 | Product Of Array Except Self | [Link](medium/238_product_of_array_except_self.py) | Medium |
+| 36 | Valid Sudoku | [Link](medium/36_valid_sudoku.py) | Medium |
+| 128 | Longest Consecutive Sequence | [Link](medium/128_longest_consecutive_sequence.py) | Medium |
 
 ## Resources
 - [Python Data Structures Docs](https://docs.python.org/3/tutorial/datastructures.html)
