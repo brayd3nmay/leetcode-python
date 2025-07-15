@@ -5,18 +5,15 @@
 
 class Solution:
     def isValid(self, s: str) -> bool:
-        brackets = []
+        brackets = {')': '(', ']': '[', '}': '{'}
+
+        inputStack = []
 
         for c in s:
-            if (c == '('
-                or c == '{'
-                or c == '['):
-                brackets.append(c)
-            else:
-                curr = brackets.pop()
-                if ((c != ')' and curr == '(')
-                    or (c != '}' and curr == '{')
-                    or (c != ']' and curr == '[')):
+            if c in brackets:
+                if len(inputStack) == 0 or brackets[c] != inputStack.pop():
                     return False
+            else:
+                inputStack.append(c)
 
-        return True
+        return len(inputStack) == 0
