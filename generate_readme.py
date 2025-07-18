@@ -157,12 +157,6 @@ try:
         
         new_content = before_table + updated_table + after_table
         
-        # Create backup before writing
-        backup_name = 'README.md.backup'
-        with open(backup_name, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"💾 Created backup: {backup_name}")
-        
         # Write updated content
         with open('README.md', 'w', encoding='utf-8') as f:
             f.write(new_content)
