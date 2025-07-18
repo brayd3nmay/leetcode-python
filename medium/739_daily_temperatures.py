@@ -10,8 +10,6 @@ class Solution:
         stack = []
         res = [0] * len(temperatures)
 
-        print(res)
-
         for i, n in enumerate(temperatures):
             while stack and n > stack[-1][1]:
                 index, num = stack.pop()
