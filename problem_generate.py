@@ -19,10 +19,34 @@ def get_problem_slug_from_url(url):
     """Extract problem slug from LeetCode URL"""
     # Handle different URL formats
     if '/problems/' in url:
-        slug = url.split('/problems/')[1].rstrip('/')
+        # Get everything after /problems/
+        slug = url.split('/problems/')[1]
+        
+        # Remove common suffixes
+        suffixes_to_remove = ['/description/', '/description', '/solutions/', '/solutions', '/discuss/', '/discuss']
+        for suffix in suffixes_to_remove:
+            if slug.endswith(suffix):
+                slug = slug[:-len(suffix)]
+                break
+        
+        # Remove any trailing slashes
+        slug = slug.rstrip('/')
+        
         return slug
     else:
         raise ValueError("Invalid LeetCode URL format")
+
+def clean_url_for_header(url):
+    """Clean URL for file header by removing extra suffixes"""
+    if '/problems/' in url:
+        # Split URL into base and problem part
+        base_url = url.split('/problems/')[0] + '/problems/'
+        slug = get_problem_slug_from_url(url)
+        
+        # Return clean URL
+        return base_url + slug + '/'
+    else:
+        return url
 
 def try_graphql_approach(problem_slug):
     """Try to get problem data using LeetCode's GraphQL API"""
@@ -371,10 +395,13 @@ def generate_file_content(problem_data):
     # Get current date
     current_date = datetime.now().strftime('%m/%d/%Y')
     
+    # Clean URL for header
+    clean_url = clean_url_for_header(url)
+    
     # Generate header
     header = f"# Problem: {number}. {title}\n"
     header += f"# Difficulty: {difficulty}\n"
-    header += f"# Link: {url}\n"
+    header += f"# Link: {clean_url}\n"
     header += f"# Date: {current_date}\n\n"
     
     # Get imports
