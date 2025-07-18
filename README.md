@@ -25,6 +25,10 @@ This repository contains all of my LeetCode solutions, written in _Python_, alon
 | 238 | Product Of Array Except Self | [Link](medium/238_product_of_array_except_self.py) | Medium |
 | 36 | Valid Sudoku | [Link](medium/36_valid_sudoku.py) | Medium |
 | 128 | Longest Consecutive Sequence | [Link](medium/128_longest_consecutive_sequence.py) | Medium |
+| 20 | Valid Parentheses | [Link](easy/20_valid_parentheses.py) | Easy |
+| 22 | Generate Parentheses | [Link](medium/22_generate_parentheses.py) | Medium |
+| 150 | Evaluate Reverse Polish Notation | [Link](medium/150_evaluate_reverse_polish_notation.py) | Medium |
+| 155 | Min Stack | [Link](medium/155_min_stack.py) | Medium |
 
 ## Resources
 - [Python Data Structures Docs](https://docs.python.org/3/tutorial/datastructures.html)
