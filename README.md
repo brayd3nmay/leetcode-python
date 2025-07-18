@@ -29,6 +29,7 @@ This repository contains all of my LeetCode solutions, written in _Python_, alon
 | 22 | Generate Parentheses | [Link](medium/22_generate_parentheses.py) | Medium |
 | 150 | Evaluate Reverse Polish Notation | [Link](medium/150_evaluate_reverse_polish_notation.py) | Medium |
 | 155 | Min Stack | [Link](medium/155_min_stack.py) | Medium |
+| 739 | Daily Temperatures | [Link](medium/739_daily_temperatures.py) | Medium |
 
 ## Resources
 - [Python Data Structures Docs](https://docs.python.org/3/tutorial/datastructures.html)
